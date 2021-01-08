@@ -25,7 +25,6 @@ function goToNext() {
 function goToPrev() {
     let sliderImage = document.getElementsByClassName('slider__image');
     let arrayImage = Array.from(sliderImage);
-    debugger;
     for (let i = arrayImage.length - 1; i >= 0; i--) {
         const element = arrayImage[i];
         if (element.closest('div').className === "slider__item slider__item_active") {
