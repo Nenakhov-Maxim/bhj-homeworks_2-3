@@ -25,12 +25,13 @@ function goToNext() {
 function goToPrev() {
     let sliderImage = document.getElementsByClassName('slider__image');
     let arrayImage = Array.from(sliderImage);
+    debugger;
     for (let i = arrayImage.length - 1; i >= 0; i--) {
         const element = arrayImage[i];
         if (element.closest('div').className === "slider__item slider__item_active") {
             element.closest('div').className = "slider__item";
             if (i - 1 < 0) {
-                arrayImage[0].closest('div').className = "slider__item slider__item_active";
+                arrayImage[arrayImage.length - 1].closest('div').className = "slider__item slider__item_active";
             } else {
                 arrayImage[i - 1].closest('div').className = "slider__item slider__item_active";
             }
